@@ -52,4 +52,4 @@ stdout_logfile=/var/www/logs/fastcgi.log
 redirect_stderr=true
 environment=GOOGLE_MAPS_API_KEY=your-google-maps-api-key-here
 ```
-Note: [main.py](main.py) reads from the environment variable `GOOGLE_MAPS_API_KEY`, which in this example is defined in the above supervisord config. Thus, the variable is propagated by supervisord invoking flup. *For alternative setups, a possible pitfall is that CGI environment variables sent via FastCGI are surfaced using the environment variable `FCGI_PARAMS`.*
+Note: [main.py](main.py) reads from the environment variable `GOOGLE_MAPS_API_KEY`, which in this example is defined in the above supervisord config. Thus, the variable is propagated by supervisord invoking flup. *For alternative setups, a possible pitfall is that CGI environment variables sent via FastCGI are surfaced using the environment variable `FCGI_PARAMS` [ref](https://serverfault.com/questions/929993/how-does-nginx-pass-environmental-variables-to-fast-cgi-handlers-like-php-fpm).*
