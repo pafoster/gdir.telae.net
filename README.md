@@ -17,7 +17,7 @@ Local development uses a setup correponding to the first category, namely werkze
 4. `python main.py`
 5. Point your browser at http://localhost:8000/index.html
 
-## Deploying Using OpenBSD httpd → FastCGI → flup
+## Deploying Using OpenBSD httpd → flup (via FastCGI)
 One example setup based on the provided [fastcgi.py](fastcgi.py) is:
 1. Create a new Python virtual environment
 2. `pip install -r requirements.txt`
