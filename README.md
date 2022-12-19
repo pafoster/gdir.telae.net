@@ -12,7 +12,7 @@ Choose a setup which reflects your needs, security considerations and personal p
 # Local Development
 Local development uses a setup correponding to the first category, namely werkzeug's development web server. For local development,
 1. Create a new Python virtual environment
-2. `pip install requirements.txt`
+2. `pip install -r requirements.txt`
 3. `export GOOGLE_MAPS_API_KEY=your-google-maps-api-key`
 4. `python main.py`
 5. Point your browser at http://localhost:8000/index.html
