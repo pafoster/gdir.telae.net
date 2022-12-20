@@ -1,9 +1,8 @@
-/* MVP.css v1.12 - https://github.com/andybrewer/mvp */
-
 body {
     max-width: 50rem;
     line-height: 2rem;
     margin: 0 1rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 ol,
