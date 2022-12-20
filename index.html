@@ -2,19 +2,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mvp.css">
     <title>Text-Based Google Directions</title>
-    <style type="text/css">
-      .el {
-        margin-bottom:10px;
-      }
-    </style>
   </head>
   <body>
     <h1>Text-Based Google Directions</h1>
     <p>A minimalistic directions service aimed at users of feature phones/dumb phones, terminal-based browsers, low-bandwidth connections, screen readers etc. Best suited for public transport directions. No JavaScript requirements.</p>
     <p><b>Note</b>: If you get a <i>no directions found</i> error, make sure that you are using the <i>country</i> drop-down selector and try including the city in the start/end location.</p>
     <form action="/gdir/"  method="get">
-      <div class="el">
+      <div>
         Country:
         <select name="country">
           <option></option>
@@ -270,13 +267,13 @@
           <option value="zw">Zimbabwe</option>
         </select>
       </div>
-      <div class="el">
+      <div>
         Start location: <input type="text" name="origin"/>
       </div>
-      <div class="el">
+      <div>
         End location: <input type="text" name="destination"/>
       </div>
-      <div class="el">
+      <div>
         Mode of travel:
         <select name="mode_of_travel">
           <option value="transit" selected="selected">Public transport</option>
@@ -285,7 +282,7 @@
           <option value="walking">Foot</option>
         </select>
       </div>
-      <div class="el">
+      <div>
         Preferred mode(s) of public transport:
         <div>
           <div>
@@ -306,7 +303,7 @@
         </div>
       </div>
       <!--
-      <div class="el">
+      <div>
         Schedule: 
         <div>
           <div>
@@ -369,7 +366,7 @@
         </div>
       </div>
       -->
-      <div class="el">
+      <div>
         Display options:
         <div>
           <div>
@@ -380,7 +377,7 @@
           </div>
         </div>
       </div>
-      <div class="el">
+      <div>
         <input type="submit" value="Search"/>
         <input type="reset"/>
       </div>

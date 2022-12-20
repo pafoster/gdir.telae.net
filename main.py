@@ -24,6 +24,8 @@ def app(request):
            '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\n' \
            '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">\n' \
            '<head>\n' \
+           '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' \
+           '<link rel="stylesheet" href="mvp.css">\n' \
            '<title>Results</title>\n' \
            '</head>\n' \
            '<body>\n' \
@@ -41,7 +43,7 @@ def app(request):
     try:
         if (len(form['country']) > 0 and form['country'] not in CCTLDS):
             raise ValueError('Invalid country specified.')
-        if len(form['origin']) == 0 | len(form['destination']) == 0:
+        if len(form['origin']) == 0 or len(form['destination']) == 0:
             raise ValueError('Both start location and end location are required fields.')
         if form['mode_of_travel'] not in ('transit', 'driving', 'bicycling', 'walking'):
             raise ValueError('Invalid mode of travel specified.')
@@ -142,4 +144,5 @@ if __name__ == '__main__':
     run_simple('localhost', 8000,
                app, use_debugger=True,
                use_reloader=True,
-               static_files={'/index.html': 'index.html'})
+               static_files={'/index.html': 'index.html',
+                             '/mvp.css': 'mvp.css'})
