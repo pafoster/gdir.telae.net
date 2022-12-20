@@ -25,7 +25,7 @@ def app(request):
            '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">\n' \
            '<head>\n' \
            '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' \
-           '<link rel="stylesheet" href="mvp.css">\n' \
+           '<link rel="stylesheet" href="/mvp.css">\n' \
            '<title>Results</title>\n' \
            '</head>\n' \
            '<body>\n' \
