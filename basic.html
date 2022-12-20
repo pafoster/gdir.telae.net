@@ -4,6 +4,11 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="mvp.css"/>
+    <style type="text/css">
+      .el {
+        margin-bottom: 0.3rem;
+      }
+    </style>
     <title>Text-Based Google Directions</title>
   </head>
   <body>
@@ -15,7 +20,7 @@
       <div>[<a href="index.html">Full</a> | Basic]</div>
     </p>
     <form action="/gdir/"  method="get">
-      <div>
+      <div class="el">
         Country:
         <div>
           <select name="country">
@@ -279,19 +284,19 @@
           </select>
         </div>
       </div>
-      <div>
+      <div class="el">
         Start location:
         <div>
           <input type="text" name="origin"/>
         </div>
       </div>
-      <div>
+      <div class="el">
         End location:
         <div>
           <input type="text" name="destination"/>
         </div>
       </div>
-      <div>
+      <div class="el">
         Mode of travel:
         <div>
           <select name="mode_of_travel">
