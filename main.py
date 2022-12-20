@@ -145,4 +145,5 @@ if __name__ == '__main__':
                app, use_debugger=True,
                use_reloader=True,
                static_files={'/index.html': 'index.html',
+                             '/basic.html': 'basic.html',
                              '/mvp.css': 'mvp.css'})
