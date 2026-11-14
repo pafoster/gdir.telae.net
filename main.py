@@ -36,7 +36,7 @@ def app(request):
     form['origin'] = request.args.get('origin', '')
     form['destination'] = request.args.get('destination', '')
     form['mode_of_travel'] = request.args.get('mode_of_travel', '')
-    form['country'] = request.args.get('country', '')
+    form['country'] = request.args.get('country', '').lower()
     form['multiple_routes'] = True if request.args.get('multiple_routes') is not None else False
     form['walking_substeps'] = True if request.args.get('walking_substeps') is not None else False
 
