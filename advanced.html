@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="mvp.css"/>
+    <style type="text/css">
+      .el {
+        margin-bottom: 0.3rem;
+      }
+    </style>
+    <title>Text-Based Google Directions</title>
+  </head>
+  <body>
+    <h1>Text-Based Google Directions</h1>
+    <p>A minimalistic directions service aimed at users of feature phones/dumb phones, terminal-based browsers, low-bandwidth connections, screen readers etc. Best suited for public transport directions. No JavaScript requirements.</p>
+    <p><b>Note</b>: If you get a <i>no directions found</i> error, make sure you have selected a <i>country</i> and try including the city in the start/end location.</p>
+    <p>
+      <div>Interface:</div>
+      <div>[<a href="/">Basic</a> | Advanced]</div>
+    </p>
+    <form action="/gdir/"  method="get">
+      <div class="el">
+        Country code (<a href="iso.html">2 letters</a>):
+        <div>
+	  <input type="text" maxlength="2" name="country"/>
+        </div>
+      </div>
+      <div class="el">
+        Start location:
+        <div>
+          <input type="text" name="origin"/>
+        </div>
+      </div>
+      <div class="el">
+        End location:
+        <div>
+          <input type="text" name="destination"/>
+        </div>
+      </div>
+      <div class="el">
+        Mode of travel:
+        <div>
+          <select name="mode_of_travel">
+            <option value="transit" selected="selected">Public transport</option>
+            <option value="driving">Car</option>
+            <option value="bicycling">Bicycle</option>
+            <option value="walking">Foot</option>
+          </select>
+        </div>
+      </div>
+      <div class="el">
+        Preferred mode(s) of public transport:
+        <div>
+          <div>
+            <input type="checkbox" name="rail" id="rail"/><label for="rail">Any rail</label>
+          </div>
+          <div>
+            <input type="checkbox" name="train" id="train"/><label for="train">Train</label>
+          </div>
+          <div>
+            <input type="checkbox" name="tram" id="tram"/><label for="tram">Tram</label>
+          </div>
+          <div>
+            <input type="checkbox" name="subway" id="underground"/><label for="underground">Subway / Underground</label>
+          </div>
+          <div>
+            <input type="checkbox" name="bus" id="bus"/><label for="bus">Bus</label>
+          </div>
+        </div>
+      </div>
+      <!--
+      <div class="el">
+        Schedule: 
+        <div>
+          <div>
+            <input type="radio" name="time_qualifier" id="time_qualifier_now" value="now" checked="checked"/><label for="time_qualifier_now">Leave now</label>
+          </div>
+          <div>
+            <input type="radio" name="time_qualifier" id="time_qualifier_departing" value="departing"/><label for="time_qualifier_departing">Departing at</label>
+          </div>
+          <div>
+            <input type="radio" name="time_qualifier" id="time_qualifier_arriving" value="arriving"/><label for="time_qualifier_arriving">Arriving by</label>
+          </div>
+        </div>
+        <div>
+          <select name="hour">
+            <option value="" selected="selected">HH</option>
+            <option value="00">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+          </select>
+          <select name="minute">
+            <option value="" selected="selected">MM</option>
+            <option value="00">00</option>
+            <option value="05">05</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+          </select>
+          <select name="day">
+            <option value="today" selected="selected">Today</option>
+            <option value="tomorrow">Tomorrow</option>
+          </select>
+        </div>
+      </div>
+      -->
+      <div class="el">
+        Display options:
+        <div>
+          <div>
+            <input type="checkbox" name="walking_substeps" id="walking_substeps"/><label for="walking_substeps">Include walking sub-steps (public transport)</label>
+          </div>
+          <div>
+            <input type="checkbox" name="multiple_routes" id="multiple_routes"/><label for="multiple_routes">Show multiple routes (if available)</label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <input type="submit" value="Search"/>
+        <input type="reset"/>
+      </div>
+    </form>
+    <p><b>Tip for Opera Mini users</b>: Make sure to enable <i>Mobile view</i> under <i>Menu &gt; Tools &gt; Settings</i>.</p>
+    <p>If you like using this service and would like to support its upkeep, you can <a href="https://buymeacoffee.com/pafoster">buy me a coffee</a>.</p>
+    <p><a href="links.html">Related links</a></p>
+  </body>
+</html>
